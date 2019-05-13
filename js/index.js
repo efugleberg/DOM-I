@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street Somewhere, USA",
+    "address" : "123 Way 456 Street\nSomewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -40,3 +40,44 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+let circle = document.getElementById("cta-img");
+circle.setAttribute('src', siteContent["cta"]["img-src"])
+let code = document.getElementById("middle-img");
+code.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+const navLinks = document.querySelectorAll("header nav a")
+navLinks[0].textContent = siteContent["nav"]["nav-item-1"]
+navLinks[1].textContent = siteContent["nav"]["nav-item-2"]
+navLinks[2].textContent = siteContent["nav"]["nav-item-3"]
+navLinks[3].textContent = siteContent["nav"]["nav-item-4"]
+navLinks[4].textContent = siteContent["nav"]["nav-item-5"]
+navLinks[5].textContent = siteContent["nav"]["nav-item-6"]
+const headerOne = document.getElementsByTagName('h1')
+headerOne[0].textContent = siteContent["cta"]["h1"]
+const button = document.querySelectorAll('button')
+button[0].textContent = siteContent["cta"]["button"];
+
+const headerFour = document.getElementsByTagName('h4')
+headerFour[0].textContent = siteContent["main-content"]["features-h4"]
+headerFour[1].textContent = siteContent["main-content"]["about-h4"]
+headerFour[2].textContent = siteContent["main-content"]["services-h4"]
+headerFour[3].textContent = siteContent["main-content"]["product-h4"]
+headerFour[4].textContent = siteContent["main-content"]["vision-h4"]
+headerFour[5].textContent = siteContent["contact"]["contact-h4"]
+
+const textBoxes = document.getElementsByTagName('p')
+textBoxes[0].textContent = siteContent['main-content']['features-content']
+textBoxes[1].textContent = siteContent['main-content']['about-content']
+textBoxes[2].textContent = siteContent['main-content']['services-content']
+textBoxes[3].textContent = siteContent['main-content']['product-content']
+textBoxes[4].textContent = siteContent['main-content']['vision-content']
+textBoxes[5].textContent = siteContent['contact']['address']
+textBoxes[6].textContent = siteContent['contact']['phone']
+textBoxes[7].textContent = siteContent['contact']['email']
+textBoxes[8].textContent = siteContent['footer']['copyright']
+
+
+
+
+
+

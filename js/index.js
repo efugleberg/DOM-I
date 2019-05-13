@@ -28,7 +28,7 @@ const siteContent = {
   },
   "contact": {
     "contact-h4" : "Contact",
-    "address" : "123 Way 456 Street\nSomewhere, USA",
+    "address" : "123 Way 456 Street Somewhere, USA",
     "phone" : "1 (888) 888-8888",
     "email" : "sales@greatidea.io",
   },
@@ -57,6 +57,7 @@ headerOne[0].textContent = siteContent["cta"]["h1"]
 const button = document.querySelectorAll('button')
 button[0].textContent = siteContent["cta"]["button"];
 
+
 const headerFour = document.getElementsByTagName('h4')
 headerFour[0].textContent = siteContent["main-content"]["features-h4"]
 headerFour[1].textContent = siteContent["main-content"]["about-h4"]
@@ -71,10 +72,35 @@ textBoxes[1].textContent = siteContent['main-content']['about-content']
 textBoxes[2].textContent = siteContent['main-content']['services-content']
 textBoxes[3].textContent = siteContent['main-content']['product-content']
 textBoxes[4].textContent = siteContent['main-content']['vision-content']
-textBoxes[5].textContent = siteContent['contact']['address']
+textBoxes[5].textContent = "123 Way 456 Street\n Somewhere, USA"
 textBoxes[6].textContent = siteContent['contact']['phone']
 textBoxes[7].textContent = siteContent['contact']['email']
 textBoxes[8].textContent = siteContent['footer']['copyright']
+
+navLinks[0].style.color = 'green';
+navLinks[1].style.color = 'green';
+navLinks[2].style.color = 'green';
+navLinks[3].style.color = 'green';
+navLinks[4].style.color = 'green';
+navLinks[5].style.color = 'green';
+
+// let nav = document.querySelector('header nav a')
+const flowers = document.createElement('a')
+// link.innerHTML = 'Send Flowers';
+// nav.appendChild(flowers)
+
+const demo = document.createElement('a')
+// link.innerHTML = 'Request Demo'
+// nav.prepend(demo)
+flowers.textContent = 'Send Flowers'
+demo.textContent = 'Request Demo'
+document.querySelector('header nav a').appendChild(flowers);
+document.querySelector('header nav a').prepend(demo);
+flowers.classList.add('header nav a');
+
+navLinks.appendChild(flowers);
+
+document.querySelectorAll('header nav a').appendChild(flowers);
 
 
 

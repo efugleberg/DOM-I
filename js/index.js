@@ -40,3 +40,70 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+let circle = document.getElementById("cta-img");
+circle.setAttribute('src', siteContent["cta"]["img-src"])
+let code = document.getElementById("middle-img");
+code.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+const navLinks = document.querySelectorAll("header nav a")
+navLinks[0].textContent = siteContent["nav"]["nav-item-1"]
+navLinks[1].textContent = siteContent["nav"]["nav-item-2"]
+navLinks[2].textContent = siteContent["nav"]["nav-item-3"]
+navLinks[3].textContent = siteContent["nav"]["nav-item-4"]
+navLinks[4].textContent = siteContent["nav"]["nav-item-5"]
+navLinks[5].textContent = siteContent["nav"]["nav-item-6"]
+const headerOne = document.getElementsByTagName('h1')
+headerOne[0].textContent = siteContent["cta"]["h1"]
+const button = document.querySelectorAll('button')
+button[0].textContent = siteContent["cta"]["button"];
+
+
+const headerFour = document.getElementsByTagName('h4')
+headerFour[0].textContent = siteContent["main-content"]["features-h4"]
+headerFour[1].textContent = siteContent["main-content"]["about-h4"]
+headerFour[2].textContent = siteContent["main-content"]["services-h4"]
+headerFour[3].textContent = siteContent["main-content"]["product-h4"]
+headerFour[4].textContent = siteContent["main-content"]["vision-h4"]
+headerFour[5].textContent = siteContent["contact"]["contact-h4"]
+
+const textBoxes = document.getElementsByTagName('p')
+textBoxes[0].textContent = siteContent['main-content']['features-content']
+textBoxes[1].textContent = siteContent['main-content']['about-content']
+textBoxes[2].textContent = siteContent['main-content']['services-content']
+textBoxes[3].textContent = siteContent['main-content']['product-content']
+textBoxes[4].textContent = siteContent['main-content']['vision-content']
+textBoxes[5].textContent = "123 Way 456 Street\n Somewhere, USA"
+textBoxes[6].textContent = siteContent['contact']['phone']
+textBoxes[7].textContent = siteContent['contact']['email']
+textBoxes[8].textContent = siteContent['footer']['copyright']
+
+navLinks[0].style.color = 'green';
+navLinks[1].style.color = 'green';
+navLinks[2].style.color = 'green';
+navLinks[3].style.color = 'green';
+navLinks[4].style.color = 'green';
+navLinks[5].style.color = 'green';
+
+// let nav = document.querySelector('header nav a')
+const flowers = document.createElement('a')
+// link.innerHTML = 'Send Flowers';
+// nav.appendChild(flowers)
+
+const demo = document.createElement('a')
+// link.innerHTML = 'Request Demo'
+// nav.prepend(demo)
+flowers.textContent = 'Send Flowers'
+demo.textContent = 'Request Demo'
+document.querySelector('header nav a').appendChild(flowers);
+document.querySelector('header nav a').prepend(demo);
+flowers.classList.add('header nav a');
+
+navLinks.appendChild(flowers);
+
+document.querySelectorAll('header nav a').appendChild(flowers);
+
+
+
+
+
+
